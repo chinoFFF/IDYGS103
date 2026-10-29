@@ -29,13 +29,12 @@ public class ControlPelota : MonoBehaviour
                 ForceMode2D.Impulse
             );
         }
-
-        void OnCollisionEnter2D(Collision2D collision)
+    } 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Suelo")
         {
-            if (collision.gameObject.name == "Suelo")
-            {
-                Debug.Log("La pelota cayó al suelo.");
-            }
+            Debug.Log("La pelota cayó al suelo.");
         }
     }
 }
